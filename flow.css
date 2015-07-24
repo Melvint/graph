@@ -82,3 +82,13 @@ input[type="input"]{
 	border:1px solid #BBB;
 	text-align:center;
 }
+
+.cvdLabel
+{
+	display: block;
+	text-align: right;
+}
+.cvdCheckbox
+{
+	margin-top: 10px;
+}
