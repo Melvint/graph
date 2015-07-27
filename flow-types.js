@@ -557,24 +557,59 @@ var types = [{
         o.y = (i.a <= 0) != (i.b <= 0);
         //o.y=i.a ^ i.b;
     }
-}, {
-    type: 'prevRendering',
-    title: 'prevRendering',
-    info: 'Results of previous rendering',
-    o: {
-        OUT:0
-    }
-},{
+}];
+
+
+var nodeTypes = {};
+
+
+var Result = {
     type: 'Result',
     title: 'Result',
     info: 'Result after postprocessing (for comparing)',
     i: {
         IN: 0
-    }
-}];
+    },
+	init: function(i, o, that)
+	{
+	    var cb = document.createElement('img');
+		cb.width = "500";
+		cb.height = "500";
+		cb.src = "screenshot.png";
+	    that.widget.box.appendChild(cb);
+		that.widget.className+=" resultCnt";
+		that.widget.box.className+=" result";
+		
+	}
+}
+
+var prevRendering = {
+    type: 'prevRendering',
+    title: 'prevRendering',
+    info: 'Results of previous rendering',
+    o: {
+        OUT:0
+    },
+
+    init: function(i, o, that)
+	{
+	    var cb = document.createElement('img');
+		cb.width = "500";
+		cb.height = "500";
+		cb.src = "screenshot.png";
+	    that.widget.box.appendChild(cb);
+		that.widget.className+=" resultCnt";
+		that.widget.box.className+=" prev";
+		
+	}
+
+}
 
 
-var nodeTypes = {};
+
+types.push(Result);
+
+types.push(prevRendering);
 
 function makeTypes() {
     for (var i in types) {
@@ -589,3 +624,4 @@ function nodeType(dArg) {
         this.inherit(dArg, iArg);
     }
 }
+

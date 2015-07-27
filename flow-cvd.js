@@ -12,7 +12,7 @@ var ColorVisionDeficiency = {
     },
     vars: {
 	       
-			enabled: false,
+			enabled: true,
 			c_type: -1,
 			curr_cb: 'normal'	
     },
@@ -43,7 +43,12 @@ function radioChange(destination,that)
 	return function()
 	{
 		destination.vars.curr_cb = this.getAttribute("value");	
-		//alert(this.getAttribute("value"));
+		Result.box = this.getAttribute("value");
+		if (destination.vars.enabled) {
+		    //alert("test1");
+			document.body.getElementsByClassName("result")[0].getElementsByTagName("img")[0].src="screenshot_"+this.getAttribute("value")+".jpg";
+			//alert("test2");
+	    };
 	}	
 }
 
@@ -56,7 +61,8 @@ function tumblerChange(destination,that)
 		for(var i=0;i<radios.length;i++){
 		        radios[i].disabled = !(this.checked);
 		}
-		destination.vars.enabled = this.checked;	
+		destination.vars.enabled = this.checked;
+	    if (!destination.vars.enabled) document.body.getElementsByClassName("result")[0].getElementsByTagName("img")[0].src= "screenshot.png";
 		//alert(this.getAttribute("value"));
 	}	
 }
