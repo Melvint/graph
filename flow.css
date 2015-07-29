@@ -192,18 +192,18 @@ input[type="input"]{
 {
 	content: "";
 	display:block;
-	margin-left: 0px;
-	height: 300px;
-	width: 300px;
+	margin-left: auto;
+	height: auto;
+	width: auto;
 }
 
 .nodeBox.result
 {
 	content: "";
 	display:block;
-	margin-left: 20px;
-	height: 300px;
-	width: 300px;
+	margin-left: auto;
+	height: auto;
+	width: auto;
 }
 
 .nodeBox.prev img,.nodeBox.result img

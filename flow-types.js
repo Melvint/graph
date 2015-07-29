@@ -578,7 +578,7 @@ var Result = {
 		cb.src = "screenshot.png";
 	    that.widget.box.appendChild(cb);
 		//that.widget.className+=" resultCnt";
-		//that.widget.box.className+=" result";
+		that.widget.box.className+=" result";
         that.widget.resize();
 		
 	}
@@ -600,7 +600,7 @@ var prevRendering = {
 		cb.src = "screenshot.png";
 	    that.widget.box.appendChild(cb);
 		//that.widget.className+=" resultCnt";
-		//that.widget.box.className+=" prev";
+		that.widget.box.className+=" prev";
         that.widget.resize();
 		
 	}
