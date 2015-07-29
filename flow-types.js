@@ -573,12 +573,13 @@ var Result = {
 	init: function(i, o, that)
 	{
 	    var cb = document.createElement('img');
-		cb.width = "500";
-		cb.height = "500";
+		cb.width = "200";
+		cb.height = "200";
 		cb.src = "screenshot.png";
 	    that.widget.box.appendChild(cb);
-		that.widget.className+=" resultCnt";
-		that.widget.box.className+=" result";
+		//that.widget.className+=" resultCnt";
+		//that.widget.box.className+=" result";
+        that.widget.resize();
 		
 	}
 }
@@ -594,12 +595,13 @@ var prevRendering = {
     init: function(i, o, that)
 	{
 	    var cb = document.createElement('img');
-		cb.width = "500";
-		cb.height = "500";
+		cb.width = "200";
+		cb.height = "200";
 		cb.src = "screenshot.png";
 	    that.widget.box.appendChild(cb);
-		that.widget.className+=" resultCnt";
-		that.widget.box.className+=" prev";
+		//that.widget.className+=" resultCnt";
+		//that.widget.box.className+=" prev";
+        that.widget.resize();
 		
 	}
 
